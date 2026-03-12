@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-compliance-kit"
+version = "0.1.0"
+description = "EU AI Act compliance toolkit including risk classification, audit logging, and governance templates."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "erron.ai"}]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/erron-ai/agent-compliance-kit"
+Issues = "https://github.com/erron-ai/agent-compliance-kit/issues"
+
+[project.scripts]
+agent-compliance-kit = "agent_compliance_kit.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
